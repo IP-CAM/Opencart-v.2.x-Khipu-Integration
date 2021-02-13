@@ -1,43 +1,43 @@
-# Integración Opencart-Khipu
+#Opencart-Khipu integration
 
-## Usar khipu como medio de pago
+## Use khipu as a means of payment
 
-Este plugin ofrece integración del sistema de e-commerce [opencart](http://www.opencart.com/) con [khipu](https://khipu.com). 
-Al instalarlo permite a los clientes pagar usando *Transferencia simplificada* (usando el terminal de pago) o con *Transferencia electrónica normal*.
-En la administración del portal se puede definir si ambas opciones o una sola estarán disponibles.
+This plugin offers integration of the e-commerce system [opencart] (http://www.opencart.com/) with [khipu] (https://khipu.com).
+When installed it allows customers to pay using * Simplified transfer * (using the payment terminal) or with * Normal electronic transfer *.
+In the portal administration you can define whether both options or only one will be available.
 
-## Instalación
+## Installation
 
-Puedes revisar una [guía online](https://khipu.com/page/opencart) de como instalar este plugin.
+You can review an [online guide] (https://khipu.com/page/opencart) on how to install this plugin.
 
-Previo a activar la extensión de khipu debes ejecutar los siguientes pasos:
+Before activating the khipu extension, you must execute the following steps:
 
-- Crear la moneda "Peso Chileno" de código CLP.
-- Configurar tu sitio para usar esta moneda por omisión.
+- Create the currency "Chilean Peso" with code CLP.
+- Configure your site to use this default currency.
 
-Luego debes ir a la configuración de las extensiones y activar _Transferencia simplificada_ y/o _Transferencia electrónica normal_. 
+Then you must go to the extensions configuration and activate _Simplified transfer_ and / or _Normal electronic transfer_.
 
-En la configuración de cada extensión debes incluir tu *id de cobrador* y tu *llave de cobrador*. Estas las puedes obtener de
-las opciones de tu cuenta de cobro en el portal de khipu.
+In the configuration of each extension you must include your * collector id * and your * collector key *. You can get these from
+the options of your collection account in the khipu portal.
 
-## Empaquetar la extensión
+## Package the extension
 
-Esta extensión utiliza [lib-php](https://github.com/khipu/lib-php) para la comunicación con khipu. Antes de empaquetar es encesario que 
-actualices los submodulos del proyecto ejecutando:
+This extension uses [lib-php] (https://github.com/khipu/lib-php) for communication with khipu. Before packing it is necessary that
+update the project submodules by executing:
 
 $ git submodule update --init
 
-Luego debes ejecutar el shell-script que se incluye:
+Then you must run the shell-script that is included:
 
 $ ./package.sh
 
-Luego de esto, se genera el archivo _dist/khipu.ocmod.zip_.
+After this, the _dist / khipu.ocmod.zip_ file is generated.
 
-## Como reportar problemas o ayudar al desarrollo
+## How to report problems or help development
 
-El sitio oficial de esta extensión es su [página en github.com](https://github.com/khipu/opencart-khipu). Si deseas 
-informar de errores, revisar el código fuente o ayudarnos a mejorarla puedes usar el sistema de tickets y pull-requests. Toda ayuda es bienvenida.
+The official site for this extension is its [page on github.com] (https://github.com/khipu/opencart-khipu). If you wish
+Report bugs, review the source code or help us improve it, you can use the ticketing and pull-requests system. Any help is welcome.
 
-## licencia GPL
+## GPL license
 
-Este plugin se distribuye bajo los términos de la licencia GPL versión 3. Puedes leer el archivo license.txt con los detalles de la licencia.
+This plugin is distributed under the terms of the GPL version 3 license. You can read the license.txt file with the license details. 
